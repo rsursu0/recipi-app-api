@@ -1,0 +1,8 @@
+;linting이라는 코딩컨벤션을 준수하는지 확인해줌. exclude는 제외
+
+[flake8]
+exclude =
+	migrations,
+	__pycache__,
+	manage.py,
+	settings.py
