@@ -168,3 +168,70 @@ Creating migrations
   - python manage.py migrate
 > Run it after waiting for database
 
+What is the Django Admin?
+> Graphical User Interface for models
+> Very little coding required
+
+Docks in DRF
+> Auto generate docs(with third party library)
+  - drf-spectacular
+> Generates schema
+> Browsable web interface
+  - make test requests
+  - hanlde auth
+
+How it works
+1. generate "schema" file
+2. parse schema into GUI
+
+OpenAPI Schema
+> Standard for describing APIs
+> Popular in industry
+> Supported by most API documentation tools
+> Suses popular formats: YAML/JSON
+
+Using a Schema
+> Download and run in local Swagger instance
+> Serve Swagger with API
+
+User API
+> User registration
+> Creating auth token
+> Viewing/updating profile
+  Endpoints
+  > user/create/
+    - POST - Register a new user
+  > user/token/
+    - POST - Create new token
+  > user/me/
+    - PUT/PATCH - Update profile
+    - GET - View profile
+
+Types of authentication
+> Basic  (BAD METHOD !!)
+  - Send username and password with each request
+> Token
+  - Use a token in the HTTP header
+> JSON Web Token (JWT)
+  - Use an access and refresh token
+> Session
+  - Use cookies
+
+Token authentication
+> Balance of simplicity and security
+> Supported out of the box by DRF
+> Well support by most clients
+  Pros and Cons
+  > Pros
+    - Supported out of the box
+    - Simple to use
+    - Supported by all clients
+    - Avoid sending username/password each time
+  > Cons
+    - Token needs to be secure
+    - Requires database requests
+
+Why no logout API?
+> Unreliable
+  - No guarnatee it will be called
+> Not useful on API
